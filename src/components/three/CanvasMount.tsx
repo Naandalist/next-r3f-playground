@@ -5,10 +5,11 @@
  *
  * Next.js lesson: `ssr: false` is NOT allowed in Server Components
  * (Next 15+/16). Keep the dynamic import here, then import CanvasMount
- * from any Server Component page.
+ * from any Server Component page — or use it inside other client pages
+ * like /viewer.
  */
 import dynamic from "next/dynamic";
-import type { ComponentProps, ReactNode } from "react";
+import type { ReactNode } from "react";
 
 const ExperienceCanvas = dynamic(
   () =>
@@ -18,7 +19,7 @@ const ExperienceCanvas = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex h-[60vh] w-full items-center justify-center rounded-xl bg-slate-900 text-sm text-slate-400">
+      <div className="flex h-full min-h-[50vh] w-full items-center justify-center bg-slate-900 text-sm text-slate-400">
         Mounting WebGL canvas…
       </div>
     ),
@@ -33,5 +34,3 @@ type CanvasMountProps = {
 export function CanvasMount(props: CanvasMountProps) {
   return <ExperienceCanvas {...props} />;
 }
-
-export type CanvasMountComponentProps = ComponentProps<typeof CanvasMount>;
