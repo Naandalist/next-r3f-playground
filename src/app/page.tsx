@@ -30,6 +30,12 @@ export default function Home() {
             >
               Open Product Viewer →
             </Link>
+            <Link
+              href="/apartment"
+              className="inline-flex items-center rounded-full bg-slate-900 px-5 py-2.5 text-sm font-medium text-amber-400 transition hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
+            >
+              Apartment Explorer →
+            </Link>
             <a
               href="https://github.com/Naandalist/next-r3f-playground"
               className="inline-flex items-center rounded-full border border-zinc-300 px-5 py-2.5 text-sm text-zinc-700 transition hover:border-zinc-500 dark:border-zinc-600 dark:text-zinc-300"
