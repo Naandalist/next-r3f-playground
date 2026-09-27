@@ -4,7 +4,16 @@
  * DOM overlay shown while Suspense waits for assets (e.g. useGLTF).
  * Kept outside the Canvas so it stays readable HTML/CSS.
  */
-export function LoadingScreen({ label = "Loading 3D assets…" }: { label?: string }) {
+type LoadingScreenProps = {
+  label?: string;
+  /** Second line — Indonesian tip or scene-specific copy */
+  subtitle?: string;
+};
+
+export function LoadingScreen({
+  label = "Loading 3D assets…",
+  subtitle = "Menyiapkan model produk…",
+}: LoadingScreenProps) {
   return (
     <div
       className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-slate-950/90 text-slate-200"
@@ -16,7 +25,7 @@ export function LoadingScreen({ label = "Loading 3D assets…" }: { label?: stri
         aria-hidden
       />
       <p className="text-sm tracking-wide">{label}</p>
-      <p className="text-xs text-slate-500">Menyiapkan model produk…</p>
+      <p className="text-xs text-slate-500">{subtitle}</p>
     </div>
   );
 }
