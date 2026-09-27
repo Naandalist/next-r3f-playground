@@ -38,7 +38,7 @@ git log --reverse --format='%h %s%n%b%n---'
 
 **Latihan:** Ganti `public/models/demo.glb` dengan GLB CC0 lain; sesuaikan `scale` di `ProductModel`. Baca `LoadingScreen` + `Suspense`.
 
-### 6. `docs: map the commit history into a Two.js/R3F learning curriculum`
+### 6. `docs: map the commit history into a Three.js/R3F learning curriculum`
 
 **Kenapa:** Dokumentasi agar Nanda (dan mentor ZOG) bisa replay cerita belajar dari git history.
 
