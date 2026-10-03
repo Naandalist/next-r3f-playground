@@ -1,0 +1,3 @@
+Kenney Furniture Kit, CC0.
+Source: https://kenney.nl/assets/furniture-kit
+Files are renamed per SKU. rug.glb is room dressing, not a selectable slot.
